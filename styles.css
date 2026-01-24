@@ -304,6 +304,10 @@
   content: counter(choice);
 }
 
+.sort ol li::before {
+  content: counter(choice, upper-alpha);
+}
+
 /* ===============================
    番号ごとの色分け
 ================================ */
