@@ -43,16 +43,23 @@
 
         // カウントダウンタイマーの実装
         function startCountdown() {
-            const h1Element = document.querySelector('h1');
+            // 既存のタイマーを全て削除
+            document.querySelectorAll('.countdown-timer').forEach(timer => timer.remove());
+            
+            const current = document.querySelector('.present');
+            if (!current) return;
+            
+            const h1Element = current.querySelector('h1');
             if (!h1Element) return;
             
             // タイマー表示用のdiv要素を作成
             const timerElement = document.createElement('div');
+            let time = parseInt(current.dataset.time);
             timerElement.className = 'countdown-timer';
-            timerElement.textContent = '10';
-            h1Element.parentElement.appendChild(timerElement);
+            timerElement.textContent = time;
+            current.appendChild(timerElement);
             
-            let time = 10;
+            // let time = 10;
             const timer = setInterval(() => {
                 time--;
                 timerElement.textContent = time;
@@ -63,7 +70,13 @@
             }, 1000);
         }
 
-        Reveal.addEventListener('ready', startCountdown);
+        Reveal.on('slidechanged', (event) => {
+            const state = event.currentSlide.dataset.state;
+            console.log(state);
+            if (state === 'with-timer') {
+                startCountdown();
+            }
+        });
     </script>
 </body>
 </html>
