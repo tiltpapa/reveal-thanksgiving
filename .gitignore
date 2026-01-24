@@ -1,6 +1,10 @@
 .env
 .vscode
 node_modules
+.DS_Store
 *.bk
 *.old
+*.jpg
+*.jpeg
+*.png
 multiple.md

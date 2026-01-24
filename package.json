@@ -4,8 +4,7 @@
   "description": "Marpから変換されたreveal.jsクイズスライド",
   "main": "index.html",
   "scripts": {
-    "start": "npx http-server -p 3000",
-    "dev": "npx http-server -p 3000 -c-1"
+    "start": "npx http-server -p 3000 -c-1"
   },
   "dependencies": {
     "reveal.js": "^5.2.1"
