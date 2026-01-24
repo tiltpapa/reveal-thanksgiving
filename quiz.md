@@ -1,4 +1,4 @@
-<!-- .slide: data-state="with-timer" -->
+<!-- .slide: data-state="with-timer" data-time="10" -->
 # Which do you like ?
 
 1. Banana
@@ -7,6 +7,9 @@
 4. Pop corn
 
 ---
+
+---
+<!-- .slide: data-state="with-timer" data-time="5" -->
 # Which do you want ?
 
 1. Banana
