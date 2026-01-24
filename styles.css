@@ -1,0 +1,152 @@
+/* ===============================
+   全体
+================================ */
+.reveal .slides {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+  background: linear-gradient(135deg, #aaeeff, #00aaff);
+  font-family: 'LINE Seed JP', 'Noto Sans JP', 'ヒラギノ角ゴシック', Meiryo, "MS Gothic", sans-serif;
+}
+
+/* ===============================
+   問題文（h1）
+================================ */
+.reveal .slides h1 {
+  width: 460px;
+  position: relative;
+  margin-top: 0;
+  margin-left: calc((100% - 700px) / 2);
+  background: linear-gradient(#fff, #dfefff);
+  color: #003366;
+  border-radius: 12px;
+  padding: 28px 32px 28px 90px;
+  font-size: 1.6em;
+  font-weight: normal;
+  line-height: 1.4;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Qマーク */
+.reveal .slides h1::before {
+  content: "Q";
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  color: #00cc66;
+  font-size: 1.4em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================
+   カウントダウンタイマー
+================================ */
+.reveal .slides .countdown-timer {
+  position: absolute;
+  top: 0px;
+  left: calc(50% + 250px);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.5), transparent 60%),
+              linear-gradient(145deg, #f7a98a, #d94f2a);
+  color: #fff;
+  font-size: 2.6em;
+  font-weight: 700;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 3px rgba(255,255,255,0.5),
+              inset 0 -3px 6px rgba(0,0,0,0.35),
+              0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* ===============================
+   選択肢リスト
+================================ */
+.reveal .slides ol {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto 0;
+  width: 700px;
+}
+
+/* 各選択肢 */
+.reveal .slides ol li {
+  position: relative;
+  background: linear-gradient(#001a66, #0b2a70);
+  border: 4px ridge #000;
+  border-radius: 16px;
+  padding: 20px 32px 20px 90px;
+  margin-bottom: 18px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: left;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
+}
+
+/* ===============================
+   選択肢の番号（li:before）
+================================ */
+.reveal .slides ol li::before {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2em;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 3px rgba(255,255,255,0.4),
+              inset 0 -2px 5px rgba(0,0,0,0.35),
+              0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 番号の自動割り当て */
+.reveal .slides ol {
+  counter-reset: choice;
+}
+
+.reveal .slides ol li {
+  counter-increment: choice;
+}
+
+.reveal .slides ol li::before {
+  content: counter(choice);
+}
+
+/* ===============================
+   番号ごとの色分け
+================================ */
+.reveal .slides ol li:nth-child(1)::before {
+  background: #3498db;
+}
+
+.reveal .slides ol li:nth-child(2)::before {
+  background: #e74c3c;
+}
+
+.reveal .slides ol li:nth-child(3)::before {
+  background: #2ecc71;
+}
+
+.reveal .slides ol li:nth-child(4)::before {
+  background: #f1c40f;
+}

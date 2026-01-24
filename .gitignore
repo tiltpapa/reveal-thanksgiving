@@ -1,0 +1,6 @@
+.env
+.vscode
+node_modules
+*.bk
+*.old
+multiple.md
