@@ -75,10 +75,18 @@
 /* ===============================
    選択肢リスト
 ================================ */
-.text-4taku ol {
+.text-4taku ol,
+.text-2taku ol {
   list-style: none;
   padding: 0;
   margin: 40px auto 0;
+  width: 700px;
+}
+
+.text-6taku ol {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto 0;
   width: 700px;
 }
 
@@ -96,10 +104,40 @@
   box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
 }
 
+/* 2択用の選択肢（高さ約2倍） */
+.text-2taku ol li {
+  position: relative;
+  background: linear-gradient(#001a66, #0b2a70);
+  border: 4px ridge #000;
+  border-radius: 16px;
+  padding: 60px 32px 60px 90px;
+  margin-bottom: 18px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: left;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
+}
+
+/* 6択用の選択肢（高さ4/5） */
+.text-6taku ol li {
+  position: relative;
+  background: linear-gradient(#001a66, #0b2a70);
+  border: 4px ridge #000;
+  border-radius: 16px;
+  padding: 16px 32px 16px 90px;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: left;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
+}
+
 /* ===============================
    選択肢の番号（li:before）
 ================================ */
-.text-4taku ol li::before {
+.text-4taku ol li::before,
+.text-2taku ol li::before,
+.text-6taku ol li::before {
   position: absolute;
   left: 24px;
   top: 50%;
@@ -153,4 +191,14 @@
 .quiz ol li:nth-child(4)::before,
 .answer ol li:nth-child(4)::before {
   background: #f1c40f;
+}
+
+.quiz ol li:nth-child(5)::before,
+.answer ol li:nth-child(5)::before {
+  background: #c5392a;
+}
+
+.quiz ol li:nth-child(6)::before,
+.answer ol li:nth-child(6)::before {
+  background: #ff0cd6;
 }
