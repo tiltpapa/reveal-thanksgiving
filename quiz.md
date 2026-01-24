@@ -1,3 +1,4 @@
+<!-- .slide: data-state="with-timer" -->
 # Which do you like ?
 
 1. Banana
