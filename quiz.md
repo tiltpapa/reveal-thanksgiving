@@ -1,4 +1,8 @@
+---
+
+---
 <!-- .slide: data-state="with-timer" data-time="10" -->
+<!-- .slide: class="quiz text-4taku" -->
 # Which do you like ?
 
 1. Banana
@@ -10,6 +14,7 @@
 
 ---
 <!-- .slide: data-state="with-timer" data-time="5" -->
+<!-- .slide: class="quiz text-4taku" -->
 # Which do you want ?
 
 1. Banana
