@@ -44,3 +44,27 @@
 2. ![B](images/soccer.png)
 3. ![C](images/tennis.png)
 4. ![D](images/himawari-16-9.jpg)
+
+---
+
+---
+<!-- .slide: data-state="with-timer" data-time="5" -->
+<!-- .slide: class="quiz image-2taku" -->
+# どちらが好き?
+
+1. ![A](images/baseball.png)
+2. ![B](images/soccer.png)
+
+---
+
+---
+<!-- .slide: data-state="with-timer" data-time="10" -->
+<!-- .slide: class="quiz image-6taku" -->
+# どれが好き?
+
+1. ![A](images/baseball.png)
+2. ![B](images/soccer.png)
+3. ![C](images/tennis.png)
+4. ![D](images/himawari-16-9.jpg)
+5. ![E](images/swimming.png)
+6. ![F](images/manekineko.png)

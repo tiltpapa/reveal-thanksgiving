@@ -100,6 +100,26 @@
   gap: 16px;
 }
 
+.image-2taku ol {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto 0;
+  width: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.image-6taku ol {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto 0;
+  width: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
 /* 各選択肢 */
 .text-4taku ol li {
   position: relative;
@@ -168,6 +188,58 @@
   object-fit: contain;
 }
 
+/* 画像2択用の選択肢（縦幅2倍） */
+.image-2taku ol li {
+  position: relative;
+  background: linear-gradient(#001a66, #0b2a70);
+  border: 4px ridge #000;
+  border-radius: 16px;
+  padding: 0px 10px 0px 10px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 画像2択用の画像サイズ調整 */
+.image-2taku ol li img {
+  max-width: 100%;
+  max-height: 380px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 画像6択用の選択肢（3列2行） */
+.image-6taku ol li {
+  position: relative;
+  background: linear-gradient(#001a66, #0b2a70);
+  border: 4px ridge #000;
+  border-radius: 16px;
+  padding: 10px 8px 0px 8px;
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: center;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 画像6択用の画像サイズ調整 */
+.image-6taku ol li img {
+  max-width: 100%;
+  max-height: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 /* ===============================
    選択肢の番号（li:before）
 ================================ */
@@ -194,7 +266,9 @@
 }
 
 /* 画像4択用の番号（左上） */
-.image-4taku ol li::before {
+.image-4taku ol li::before,
+.image-2taku ol li::before,
+.image-6taku ol li::before {
   position: absolute;
   left: 8px;
   top: 8px;
