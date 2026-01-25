@@ -63,10 +63,22 @@
             // let time = 10;
             const timer = setInterval(() => {
                 time--;
+                if (time < 0) {
+                    time = 0;
+                }
                 timerElement.textContent = time;
                 // 残り3秒以降演出を加える
+                if (time <= 3) {
+                    timerElement.classList.remove('timer-warning');
+                    void timerElement.offsetWidth; // リフロー強制
+                    timerElement.classList.add('timer-warning');
+                }
                 if (time <= 0) {
                     clearInterval(timer);
+                    // アニメーション終了後にクラスを削除
+                    setTimeout(() => {
+                        timerElement.classList.remove('timer-warning');
+                    }, 1000);
                 }
             }, 1000);
         }
