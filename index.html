@@ -54,7 +54,8 @@
             
             // タイマー表示用のdiv要素を作成
             const timerElement = document.createElement('div');
-            let time = parseInt(current.dataset.time);
+            let limit = current.dataset.limit;
+            let time = limit ? parseInt(limit) : 10;  //未定義なら10秒
             timerElement.className = 'countdown-timer';
             timerElement.textContent = time;
             current.appendChild(timerElement);
@@ -63,7 +64,7 @@
             const timer = setInterval(() => {
                 time--;
                 timerElement.textContent = time;
-                
+                // 残り3秒以降演出を加える
                 if (time <= 0) {
                     clearInterval(timer);
                 }

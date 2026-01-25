@@ -1,6 +1,6 @@
 
 ---
-<!-- .slide: data-state="with-timer" data-time="10" -->
+<!-- .slide: data-state="with-timer" -->
 <!-- .slide: class="quiz text-4taku" -->
 # Which do you like ?
 
@@ -12,7 +12,7 @@
 ---
 
 ---
-<!-- .slide: data-state="with-timer" data-time="5" -->
+<!-- .slide: data-state="with-timer" data-limit="5" -->
 <!-- .slide: class="quiz text-2taku" -->
 # Which do you want ?
 
@@ -22,7 +22,7 @@
 ---
 
 ---
-<!-- .slide: data-state="with-timer" data-time="15" -->
+<!-- .slide: data-state="with-timer" data-limit="15" -->
 <!-- .slide: class="quiz text-6taku" -->
 # Which do you like ?
 
@@ -36,7 +36,7 @@
 ---
 
 ---
-<!-- .slide: data-state="with-timer" data-time="10" -->
+<!-- .slide: data-state="with-timer" data-limit="10" -->
 <!-- .slide: class="quiz image-4taku" -->
 # どれが好き?
 
@@ -48,7 +48,7 @@
 ---
 
 ---
-<!-- .slide: data-state="with-timer" data-time="5" -->
+<!-- .slide: data-state="with-timer" data-limit="5" -->
 <!-- .slide: class="quiz image-2taku" -->
 # どちらが好き?
 
@@ -58,7 +58,7 @@
 ---
 
 ---
-<!-- .slide: data-state="with-timer" data-time="10" -->
+<!-- .slide: data-state="with-timer" data-limit="10" -->
 <!-- .slide: class="quiz image-6taku" -->
 # どれが好き?
 
