@@ -10,13 +10,8 @@
 4. Pop corn
 
 >>>
+<!-- .slide: data-state="copy-prev" -->
 <!-- .slide: class="answer text-4taku" -->
-# Which do you like ?
-
-1. Banana
-2. Apple
-3. Orange
-4. Pop corn
 
 ---
 
