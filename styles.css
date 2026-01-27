@@ -377,3 +377,32 @@
     opacity: 0;
   }
 }
+
+/* ===============================
+   回答数表示
+================================ */
+.answer li::after {
+  content: attr(data-count);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(to right, #cccccc, #ffffff 30%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 3px inset #000;
+  min-width: 40px;
+  min-height: 30px;
+  color: #003366;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px 2px rgba(255,255,255,0.6), 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.image-2taku ol li::after,
+.image-6taku ol li::after,
+.image-4taku ol li::after {
+  top: 80%;
+}

@@ -1,5 +1,5 @@
-
----
+# テキスト4択
+>>>
 <!-- .slide: data-state="with-timer" -->
 <!-- .slide: class="quiz text-4taku" -->
 # Which do you like ?
@@ -14,8 +14,8 @@
 <!-- .slide: class="answer text-4taku" -->
 
 ---
-
----
+# テキスト2択
+>>>
 <!-- .slide: data-state="with-timer" data-limit="5" -->
 <!-- .slide: class="quiz text-2taku" -->
 # Which do you want ?
@@ -24,8 +24,8 @@
 2. Apple
 
 ---
-
----
+# テキスト6択
+>>>
 <!-- .slide: data-state="with-timer" data-limit="15" -->
 <!-- .slide: class="quiz text-6taku" -->
 # Which do you like ?
@@ -37,9 +37,13 @@
 5. Patato Chips
 6. Candy
 
----
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer text-6taku" -->
 
 ---
+# 画像4択
+>>>
 <!-- .slide: data-state="with-timer" data-limit="10" -->
 <!-- .slide: class="quiz image-4taku" -->
 # どれが好き?
@@ -49,9 +53,13 @@
 3. ![C](images/tennis.png)
 4. ![D](images/himawari-16-9.jpg)
 
----
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer image-4taku" -->
 
 ---
+# 画像2択
+>>>
 <!-- .slide: data-state="with-timer" data-limit="5" -->
 <!-- .slide: class="quiz image-2taku" -->
 # どちらが好き?
@@ -60,8 +68,8 @@
 2. ![B](images/soccer.png)
 
 ---
-
----
+# 画像6択
+>>>
 <!-- .slide: data-state="with-timer" data-limit="10" -->
 <!-- .slide: class="quiz image-6taku" -->
 # どれが好き?
@@ -72,3 +80,9 @@
 4. ![D](images/himawari-16-9.jpg)
 5. ![E](images/swimming.png)
 6. ![F](images/manekineko.png)
+
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer image-6taku" -->
+
+
