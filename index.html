@@ -15,6 +15,7 @@
             <!-- Markdownファイルを読み込む -->
             <section data-markdown="quiz.md"
                      data-separator="^\r?\n---\r?\n"
+                     data-separator-vertical="^\r?\n>>>\r?\n"
             >
             </section>
         </div>
@@ -46,19 +47,20 @@
             // 既存のタイマーを全て削除
             document.querySelectorAll('.countdown-timer').forEach(timer => timer.remove());
             
-            const current = document.querySelector('.present');
-            if (!current) return;
+            // presentかつdata-state="with-timer"を持つsection要素を探す
+            const targetSection = document.querySelector('section.present[data-state="with-timer"]');
+            if (!targetSection) return;
             
-            const h1Element = current.querySelector('h1');
+            const h1Element = targetSection.querySelector('h1');
             if (!h1Element) return;
             
             // タイマー表示用のdiv要素を作成
             const timerElement = document.createElement('div');
-            let limit = current.dataset.limit;
+            let limit = targetSection.dataset.limit;
             let time = limit ? parseInt(limit) : 10;  //未定義なら10秒
             timerElement.className = 'countdown-timer';
             timerElement.textContent = time;
-            current.appendChild(timerElement);
+            targetSection.appendChild(timerElement);
             
             // let time = 10;
             const timer = setInterval(() => {
