@@ -24,6 +24,8 @@
     <script type="module">
         import Reveal from './node_modules/reveal.js/dist/reveal.esm.js';
         import Markdown from './node_modules/reveal.js/plugin/markdown/markdown.esm.js';
+        import { startCountdown } from './lib/countdown.js';
+        import { copyPreviousSlide } from './lib/copy-slide.js';
         
         // Reveal.jsを初期化
         Reveal.initialize({
@@ -42,85 +44,14 @@
             plugins: [ Markdown ]
         });
 
-        // カウントダウンタイマーの実装
-        function startCountdown() {
-            // presentかつdata-state="with-timer"を持つsection要素を探す
-            const targetSection = document.querySelector('section.present[data-state="with-timer"]');
-            if (!targetSection) return;
-            // 現在のスライドの既存のタイマーを全て削除
-            targetSection.querySelectorAll('.countdown-timer').forEach(timer => timer.remove());
-            
-            const h1Element = targetSection.querySelector('h1');
-            if (!h1Element) return;
-            
-            // タイマー表示用のdiv要素を作成
-            const timerElement = document.createElement('div');
-            let limit = targetSection.dataset.limit;
-            let time = limit ? parseInt(limit) : 10;  //未定義なら10秒
-            timerElement.className = 'countdown-timer';
-            timerElement.textContent = time;
-            targetSection.appendChild(timerElement);
-            
-            // let time = 10;
-            const timer = setInterval(() => {
-                time--;
-                if (time < 0) {
-                    time = 0;
-                }
-                timerElement.textContent = time;
-                // 残り3秒以降演出を加える
-                if (time <= 3) {
-                    timerElement.classList.remove('timer-warning');
-                    void timerElement.offsetWidth; // リフロー強制
-                    timerElement.classList.add('timer-warning');
-                }
-                if (time <= 0) {
-                    clearInterval(timer);
-                    // アニメーション終了後にクラスを削除
-                    setTimeout(() => {
-                        timerElement.classList.remove('timer-warning');
-                    }, 1000);
-                }
-            }, 1000);
-        }
-
-        // 前のスライドの内容をコピーする関数
-        function copyPreviousSlide() {
-            const currentSlide = document.querySelector('section.present[data-state="copy-prev"]');
-            if (!currentSlide) return;
-            
-            const previousSlide = Reveal.getPreviousSlide();
-            if (!previousSlide) return;
-            
-            // 既にコピー済みの場合はスキップ
-            if (currentSlide.dataset.copied === 'true') return;
-            
-            // 前のスライドの子要素を全てクローン
-            Array.from(previousSlide.children).forEach(child => {
-                const clonedChild = child.cloneNode(true);
-                currentSlide.appendChild(clonedChild);
-            });
-            
-            // クローン完了後、タイマー要素があれば値を0に設定
-            const timer = currentSlide.querySelector('.countdown-timer');
-            if (timer) {
-                timer.textContent = '0';
-            }
-            
-            // コピー済みフラグを設定
-            currentSlide.dataset.copied = 'true';
-            
-            // Reveal.jsにレイアウトを再計算させる
-            Reveal.sync();
-        }
-
+        // スライド変更時のイベントハンドラーを設定
         Reveal.on('slidechanged', (event) => {
             const state = event.currentSlide.dataset.state;
             console.log(state);
             if (state === 'with-timer') {
                 startCountdown();
             } else if (state === 'copy-prev') {
-                copyPreviousSlide();
+                copyPreviousSlide(Reveal);
             }
         });
     </script>
