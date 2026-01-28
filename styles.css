@@ -410,7 +410,7 @@
 /* ===============================
    正解発表アニメーション
 ================================ */
-@keyframes right-blink {
+@keyframes maru-blink {
   0% {
     background: linear-gradient(#001a66, #0b2a70);
   }
@@ -422,48 +422,48 @@
   }
 }
 
-.right-this {
-  animation: right-blink 1.8s ease-in-out forwards;
+.maru-this {
+  animation: maru-blink 1.8s ease-in-out forwards;
   animation-play-state: paused;
 }
 
-.right-1 li:nth-child(1) {
-  animation: right-blink 1.8s ease-in-out forwards;
+.maru-1 li:nth-child(1) {
+  animation: maru-blink 1.8s ease-in-out forwards;
   animation-play-state: paused;
 }
 
-.right-2 li:nth-child(2) {
-  animation: right-blink 1.8s ease-in-out forwards;
+.maru-2 li:nth-child(2) {
+  animation: maru-blink 1.8s ease-in-out forwards;
   animation-play-state: paused;
 }
 
-.right-3 li:nth-child(3) {
-  animation: right-blink 1.8s ease-in-out forwards;
+.maru-3 li:nth-child(3) {
+  animation: maru-blink 1.8s ease-in-out forwards;
   animation-play-state: paused;
 }
 
-.right-4 li:nth-child(4) {
-  animation: right-blink 1.8s ease-in-out forwards;
+.maru-4 li:nth-child(4) {
+  animation: maru-blink 1.8s ease-in-out forwards;
   animation-play-state: paused;
 }
 
-.right-5 li:nth-child(5) {
-  animation: right-blink 1.8s ease-in-out forwards;
+.maru-5 li:nth-child(5) {
+  animation: maru-blink 1.8s ease-in-out forwards;
   animation-play-state: paused;
 }
 
-.right-6 li:nth-child(6) {
-  animation: right-blink 1.8s ease-in-out forwards;
+.maru-6 li:nth-child(6) {
+  animation: maru-blink 1.8s ease-in-out forwards;
   animation-play-state: paused;
 }
 
 /* スライド表示時にアニメーション開始 */
-.present > .present .right-this,
-.present > .present.right-1 li:nth-child(1),
-.present > .present.right-2 li:nth-child(2),
-.present > .present.right-3 li:nth-child(3),
-.present > .present.right-4 li:nth-child(4),
-.present > .present.right-5 li:nth-child(5),
-.present > .present.right-6 li:nth-child(6) {
+.present > .present .maru-this,
+.present > .present.maru-1 li:nth-child(1),
+.present > .present.maru-2 li:nth-child(2),
+.present > .present.maru-3 li:nth-child(3),
+.present > .present.maru-4 li:nth-child(4),
+.present > .present.maru-5 li:nth-child(5),
+.present > .present.maru-6 li:nth-child(6) {
   animation-play-state: running;
 }

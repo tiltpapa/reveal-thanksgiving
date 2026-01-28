@@ -15,7 +15,7 @@
 
 >>>
 <!-- .slide: data-state="copy-prev" -->
-<!-- .slide: class="answer text-4taku right-1 right-2 right-3 right-4" -->
+<!-- .slide: class="answer text-4taku maru-1 maru-2 maru-3 maru-4" -->
 ---
 # テキスト2択
 >>>
@@ -31,7 +31,7 @@
 # Which do you want ?
 
 1. Banana
-2. Apple <!-- .element: class="right-this" -->
+2. Apple <!-- .element: class="maru-this" -->
 
 ---
 # テキスト6択
