@@ -406,3 +406,46 @@
 .image-4taku ol li::after {
   top: 80%;
 }
+
+/* ===============================
+   正解発表アニメーション
+================================ */
+@keyframes right-blink {
+  0% {
+    background: linear-gradient(#001a66, #0b2a70);
+  }
+  16.67%, 50%, 83.33%, 100% {
+    background: linear-gradient(#ff1493, #ff69b4);
+  }
+  33.33%, 66.67% {
+    background: linear-gradient(#001a66, #0b2a70);
+  }
+}
+
+.right-this {
+  animation: right-blink 1.8s ease-in-out forwards;
+}
+
+.right-1 li:nth-child(1) {
+  animation: right-blink 1.8s ease-in-out forwards;
+}
+
+.right-2 li:nth-child(2) {
+  animation: right-blink 1.8s ease-in-out forwards;
+}
+
+.right-3 li:nth-child(3) {
+  animation: right-blink 1.8s ease-in-out forwards;
+}
+
+.right-4 li:nth-child(4) {
+  animation: right-blink 1.8s ease-in-out forwards;
+}
+
+.right-5 li:nth-child(5) {
+  animation: right-blink 1.8s ease-in-out forwards;
+}
+
+.right-6 li:nth-child(6) {
+  animation: right-blink 1.8s ease-in-out forwards;
+}

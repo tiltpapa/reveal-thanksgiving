@@ -13,6 +13,9 @@
 <!-- .slide: data-state="copy-prev" -->
 <!-- .slide: class="answer text-4taku" -->
 
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer text-4taku right-1 right-2 right-3 right-4" -->
 ---
 # テキスト2択
 >>>
@@ -22,6 +25,13 @@
 
 1. Banana
 2. Apple
+
+>>>
+<!-- .slide: class="answer text-2taku" -->
+# Which do you want ?
+
+1. Banana
+2. Apple <!-- .element: class="right-this" -->
 
 ---
 # テキスト6択
