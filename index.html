@@ -15,6 +15,7 @@
             <!-- Markdownファイルを読み込む -->
             <section data-markdown="quiz.md"
                      data-separator="^\r?\n---\r?\n"
+                     data-separator-vertical="^\r?\n>>>\r?\n"
             >
             </section>
         </div>
@@ -43,22 +44,22 @@
 
         // カウントダウンタイマーの実装
         function startCountdown() {
-            // 既存のタイマーを全て削除
-            document.querySelectorAll('.countdown-timer').forEach(timer => timer.remove());
+            // presentかつdata-state="with-timer"を持つsection要素を探す
+            const targetSection = document.querySelector('section.present[data-state="with-timer"]');
+            if (!targetSection) return;
+            // 現在のスライドの既存のタイマーを全て削除
+            targetSection.querySelectorAll('.countdown-timer').forEach(timer => timer.remove());
             
-            const current = document.querySelector('.present');
-            if (!current) return;
-            
-            const h1Element = current.querySelector('h1');
+            const h1Element = targetSection.querySelector('h1');
             if (!h1Element) return;
             
             // タイマー表示用のdiv要素を作成
             const timerElement = document.createElement('div');
-            let limit = current.dataset.limit;
+            let limit = targetSection.dataset.limit;
             let time = limit ? parseInt(limit) : 10;  //未定義なら10秒
             timerElement.className = 'countdown-timer';
             timerElement.textContent = time;
-            current.appendChild(timerElement);
+            targetSection.appendChild(timerElement);
             
             // let time = 10;
             const timer = setInterval(() => {
@@ -83,11 +84,43 @@
             }, 1000);
         }
 
+        // 前のスライドの内容をコピーする関数
+        function copyPreviousSlide() {
+            const currentSlide = document.querySelector('section.present[data-state="copy-prev"]');
+            if (!currentSlide) return;
+            
+            const previousSlide = Reveal.getPreviousSlide();
+            if (!previousSlide) return;
+            
+            // 既にコピー済みの場合はスキップ
+            if (currentSlide.dataset.copied === 'true') return;
+            
+            // 前のスライドの子要素を全てクローン
+            Array.from(previousSlide.children).forEach(child => {
+                const clonedChild = child.cloneNode(true);
+                currentSlide.appendChild(clonedChild);
+            });
+            
+            // クローン完了後、タイマー要素があれば値を0に設定
+            const timer = currentSlide.querySelector('.countdown-timer');
+            if (timer) {
+                timer.textContent = '0';
+            }
+            
+            // コピー済みフラグを設定
+            currentSlide.dataset.copied = 'true';
+            
+            // Reveal.jsにレイアウトを再計算させる
+            Reveal.sync();
+        }
+
         Reveal.on('slidechanged', (event) => {
             const state = event.currentSlide.dataset.state;
             console.log(state);
             if (state === 'with-timer') {
                 startCountdown();
+            } else if (state === 'copy-prev') {
+                copyPreviousSlide();
             }
         });
     </script>
