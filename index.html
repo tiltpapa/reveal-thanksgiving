@@ -24,6 +24,7 @@
     <script type="module">
         import Reveal from './node_modules/reveal.js/dist/reveal.esm.js';
         import Markdown from './node_modules/reveal.js/plugin/markdown/markdown.esm.js';
+        import QuaggaPlugin from './plugin/quagga.js';
         import { startCountdown } from './lib/countdown.js';
         import { copyPreviousSlide } from './lib/copy-slide.js';
         
@@ -40,8 +41,8 @@
             center: true,
             disableLayout: false,
             transition: 'none',
-            // Markdownプラグインを有効化
-            plugins: [ Markdown ]
+            // プラグインを有効化
+            plugins: [ Markdown, QuaggaPlugin ]
         });
 
         // スライド変更時のイベントハンドラーを設定
