@@ -50,7 +50,7 @@ const QuaggaPlugin = () => {
     }
 
     // 垂直スライドも含めて現在のスライドを取得
-    const currentSlide = document.querySelector('.reveal .slides section.present section.present') 
+    let currentSlide = document.querySelector('.reveal .slides section.present section.present') 
                       || document.querySelector('.reveal .slides section.present');
     
     if (!currentSlide) {
@@ -58,9 +58,30 @@ const QuaggaPlugin = () => {
       return;
     }
     
+    // 現在のスライドがanswerクラスでない場合、次のスライドを探す
     if (!currentSlide.classList.contains('answer')) {
-      console.warn('警告: 現在のスライドは回答スライドではありません', currentSlide.className);
-      return;
+      console.log('現在のスライドはanswerスライドではありません。次のスライドを確認します。');
+      
+      // 垂直スライドの場合、次の垂直スライドを探す
+      let nextSlide = currentSlide.nextElementSibling;
+      
+      // 垂直スライドがない場合、次の水平スライドの最初の垂直スライドを探す
+      if (!nextSlide) {
+        const parentSection = currentSlide.parentElement;
+        const nextParentSection = parentSection?.nextElementSibling;
+        if (nextParentSection) {
+          // 次の水平スライドに垂直スライドがあるか確認
+          nextSlide = nextParentSection.querySelector('section') || nextParentSection;
+        }
+      }
+      
+      if (nextSlide && nextSlide.classList.contains('answer')) {
+        currentSlide = nextSlide;
+        console.log('次のスライドがanswerスライドです。そちらに反映します。');
+      } else {
+        console.warn('警告: 次のスライドもanswerスライドではありません', nextSlide?.className);
+        return;
+      }
     }
 
     // 選択肢の数を取得
