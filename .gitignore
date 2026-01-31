@@ -7,5 +7,8 @@ node_modules
 *.jpg
 *.jpeg
 *.png
+*.mp4
+*.mkv
+*.mov
 multiple.md
 config.js
