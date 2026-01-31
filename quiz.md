@@ -31,6 +31,13 @@
 # Which do you want ?
 
 1. Banana
+2. Apple
+
+>>>
+<!-- .slide: class="answer text-2taku" -->
+# Which do you want ?
+
+1. Banana
 2. Apple <!-- .element: class="maru-this" -->
 
 ---
@@ -51,6 +58,10 @@
 <!-- .slide: data-state="copy-prev" -->
 <!-- .slide: class="answer text-6taku" -->
 
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer text-6taku maru-5 maru-6" -->
+
 ---
 # 画像4択
 >>>
@@ -67,6 +78,10 @@
 <!-- .slide: data-state="copy-prev" -->
 <!-- .slide: class="answer image-4taku" -->
 
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer image-4taku maru-3" -->
+
 ---
 # 画像2択
 >>>
@@ -76,6 +91,14 @@
 
 1. ![A](images/baseball.png)
 2. ![B](images/soccer.png)
+
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer image-2taku" -->
+
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer image-2taku maru-1" -->
 
 ---
 # 画像6択
@@ -95,4 +118,7 @@
 <!-- .slide: data-state="copy-prev" -->
 <!-- .slide: class="answer image-6taku" -->
 
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer image-6taku maru-6" -->
 
