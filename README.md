@@ -53,7 +53,12 @@ export const config = {
 npm start
 ```
 
-ブラウザで `http://localhost:3000` にアクセスします。
+プロキシサーバーが起動し、ブラウザで `http://localhost:3000` にアクセスします。
+
+プロキシサーバーは以下の機能を提供します：
+- 静的ファイルの配信
+- Quagga APIへのプロキシ（CORS回避）
+- デバッグモード/本番モードの自動切り替え
 
 ### 3. Quagga連携
 

@@ -18,15 +18,10 @@ const QuaggaPlugin = () => {
     console.log('データ取得中...');
 
     try {
-      const url = config.debugMode 
-        ? `https://ranking-quagga.tiltpapa.workers.dev/programs/${config.eventId}/questions/last_aggregate`
-        : `${config.apiBase}/programs/${config.eventId}/questions/last_aggregate`;
+      // プロキシサーバー経由でAPIにアクセス
+      const url = `/api/programs/${config.eventId}/questions/last_aggregate`;
 
-      const headers = config.debugMode ? {} : {
-        'Authorization': `Bearer ${config.token}`
-      };
-
-      const response = await fetch(url, { headers });
+      const response = await fetch(url);
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
