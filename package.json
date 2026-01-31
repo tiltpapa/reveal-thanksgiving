@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Marpから変換されたreveal.jsクイズスライド",
   "main": "index.html",
+  "type": "module",
   "scripts": {
-    "start": "npx http-server -p 3000 -c-1"
+    "start": "node proxy-server.js"
   },
   "dependencies": {
     "reveal.js": "^5.2.1"
