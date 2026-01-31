@@ -28,11 +28,9 @@ Reveal.jsプレゼンテーションで、カウントダウンタイマー付�
 - **Node.js と npm**（必須）- JavaScriptの実行環境とパッケージ管理ツール
 - **Git**（任意）- バージョン管理システム（ダウンロード方法によっては不要）
 
-### Windowsの場合
+#### 方法1: wingetを使ってインストール(Windowsの場合)
 
-#### 方法1: wingetを使ってインストール（推奨）
-
-Windows 10/11に標準搭載されているwingetを使うと簡単にインストールできます。
+Windowsに標準搭載されているwingetを使用
 
 1. **PowerShellまたはコマンドプロンプトを管理者権限で開く**
 
@@ -57,20 +55,7 @@ Windows 10/11に標準搭載されているwingetを使うと簡単にインス�
 - Node.js: https://nodejs.org/ から「LTS版」をダウンロードしてインストール
 - Git: https://git-scm.com/ からダウンロードしてインストール（任意）
 
-### macOS / Linuxの場合
 
-#### macOS
-```bash
-# Homebrewを使う場合
-brew install node
-brew install git  # 任意
-```
-
-#### Linux (Ubuntu/Debian)
-```bash
-sudo apt update
-sudo apt install nodejs npm
-sudo apt install git  # 任意
 ```
 
 ### プロジェクトのダウンロード
