@@ -2,24 +2,94 @@
 
 Reveal.jsプレゼンテーションで、カウントダウンタイマー付きのクイズスライドです。
 
-## ファイル構成
-
-- `index.html` - メインプレゼンテーションファイル
-- `styles.css` - スタイル定義
-- `quiz.md` - クイズコンテンツ
-- `plugin/quagga.js` - Quagga連携プラグイン
-- `config.js` - 環境設定ファイル（gitignore対象）
-- `config.example.js` - 設定ファイルのサンプル
-
 ## 機能
 
 - カウントダウンタイマー付きクイズ表示
 - 2択、4択、6択に対応
 - テキスト・画像クイズに対応
 - 正解発表アニメーション
-- Quagga APIと連携した回答数表示
+- Quagga APIと連携した回答数表示・ランキング表示
+
+## ファイル構成
+
+- `index.html` - メインプレゼンテーションファイル
+- `styles.css` - スタイル定義
+- `quiz.md` - クイズコンテンツ
+- `plugin/quagga.js` - Quagga連携プラグイン
+- `config.js` - 環境設定ファイル
+- `config.example.js` - 設定ファイルのサンプル
 
 ## インストール
+
+### 必要な環境
+
+このプロジェクトを動かすには、以下のソフトウェアが必要です：
+
+- **Node.js と npm**（必須）- JavaScriptの実行環境とパッケージ管理ツール
+- **Git**（任意）- バージョン管理システム（ダウンロード方法によっては不要）
+
+### Windowsの場合
+
+#### 方法1: wingetを使ってインストール（推奨）
+
+Windows 10/11に標準搭載されているwingetを使うと簡単にインストールできます。
+
+1. **PowerShellまたはコマンドプロンプトを管理者権限で開く**
+
+2. **Node.jsとnpmをインストール**
+   ```bash
+   winget install OpenJS.NodeJS
+   ```
+
+3. **Git をインストール（任意）**
+   ```bash
+   winget install Git.Git
+   ```
+
+4. **インストール確認**
+   ```bash
+   node --version
+   npm --version
+   ```
+
+#### 方法2: 公式サイトからダウンロード
+
+- Node.js: https://nodejs.org/ から「LTS版」をダウンロードしてインストール
+- Git: https://git-scm.com/ からダウンロードしてインストール（任意）
+
+### macOS / Linuxの場合
+
+#### macOS
+```bash
+# Homebrewを使う場合
+brew install node
+brew install git  # 任意
+```
+
+#### Linux (Ubuntu/Debian)
+```bash
+sudo apt update
+sudo apt install nodejs npm
+sudo apt install git  # 任意
+```
+
+### プロジェクトのダウンロード
+
+#### Gitを使う場合
+```bash
+git clone <リポジトリURL>
+cd reveal-thanksgiving
+```
+
+#### Gitを使わない場合
+1. GitHubのリポジトリページで「Code」ボタンをクリック
+2. 「Download ZIP」を選択してダウンロード
+3. ZIPファイルを解凍
+4. 解凍したフォルダをターミナル/コマンドプロンプトで開く
+
+### 依存パッケージのインストール
+
+プロジェクトフォルダで以下のコマンドを実行：
 
 ```bash
 npm install
@@ -62,12 +132,16 @@ npm start
 
 ### 3. Quagga連携
 
-回答スライドで **qキー** を押すと、直近の集計データを取得して各選択肢の回答数を表示します。
+回答スライドで **Qキー** を押すと、直近の集計データを取得して各選択肢の回答数を表示します。
 
-- 取得ステータスは画面左下に表示されます
-- 回答数は各選択肢の右側に「○人」形式で表示されます
+- 回答数は各選択肢の右側のボックスに表示されます
+- 現在のスライドが回答スライドではない場合、直後の回答スライドに反映します。
 
 ## カスタマイズ
 
-- `styles.css`を編集して外観を変更
-- `quiz.md`を編集してクイズ内容を変更
+クイズの内容や見た目をカスタマイズする方法については、[CUSTOMIZE.md](CUSTOMIZE.md)を参照してください。
+
+## 備考
+
+- 動作確認はChromeで行なっています。他のブラウザでは動作やレイアウトが崩れる可能性があります。
+- 動画対応は開発中
