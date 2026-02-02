@@ -187,7 +187,8 @@
 }
 
 /* 画像4択用の画像サイズ調整 */
-.image-4taku ol li img {
+.image-4taku ol li img,
+.image-4taku ol li video {
   max-width: 100%;
   max-height: 180px;
   width: auto;
@@ -213,7 +214,8 @@
 }
 
 /* 画像2択用の画像サイズ調整 */
-.image-2taku ol li img {
+.image-2taku ol li img,
+.image-2taku ol li video {
   max-width: 100%;
   max-height: 380px;
   width: auto;
@@ -239,7 +241,8 @@
 }
 
 /* 画像6択用の画像サイズ調整 */
-.image-6taku ol li img {
+.image-6taku ol li img,
+.image-6taku ol li video {
   max-width: 100%;
   max-height: 160px;
   width: auto;
