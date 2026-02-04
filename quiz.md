@@ -122,3 +122,21 @@
 <!-- .slide: data-state="copy-prev" -->
 <!-- .slide: class="answer image-6taku maru-6" -->
 
+---
+# 動画4択
+>>>
+<!-- .slide: data-state="with-timer" data-limit="10" -->
+<!-- .slide: class="quiz image-4taku" -->
+# どれが好き?
+
+1. <video src="images/sample.mp4"></video>
+2. <video src="images/sample2.mp4"></video>
+3. ![C](images/tennis.png)
+4. ![E](images/swimming.png)
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer image-4taku" -->
+
+>>>
+<!-- .slide: data-state="copy-prev" -->
+<!-- .slide: class="answer image-4taku maru-1" -->
