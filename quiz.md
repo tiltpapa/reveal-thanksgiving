@@ -130,7 +130,7 @@
 # どれが好き?
 
 1. <video src="images/sample.mp4"></video>
-2. ![B](images/soccer.png)
+2. <video src="images/sample2.mp4"></video>
 3. ![C](images/tennis.png)
 4. ![E](images/swimming.png)
 >>>

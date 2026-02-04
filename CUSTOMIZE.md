@@ -250,11 +250,48 @@ Reveal.jsでは、スライドを2方向に配置できます：
    
    サーバー起動後、`http://localhost:3000/period2.html`にアクセス
 
+### 動画を使用する場合
+
+クイズスライドで動画を使用する場合、回答スライドでは事前に用意した動画の最終フレーム画像を表示します。
+
+#### 事前準備
+
+1. **ffmpegのインストール**（初回のみ）
+
+   macOS:
+   ```bash
+   brew install ffmpeg
+   ```
+   
+   Windows: https://ffmpeg.org/download.html からダウンロード
+
+2. **動画の最終フレーム画像を生成**
+
+   ```bash
+   node extract-last-frame.js images/sample.mp4 images/sample2.mp4
+   ```
+
+   または、imagesフォルダ内の全mp4ファイルを一括処理：
+   ```bash
+   node extract-last-frame.js images/*.mp4
+   ```
+
+   これにより、各動画ファイルと同じディレクトリに同名の`.png`ファイルが生成されます。
+   例: `images/sample.mp4` → `images/sample.png`
+
+3. **スライドで動画を使用**
+
+   `quiz.md`で通常通り動画を指定すれば、回答スライドでは自動的に対応する画像が使用されます：
+
+   ```markdown
+   1. <video src="images/sample.mp4"></video>
+   2. <video src="images/sample2.mp4"></video>
+   ```
+
 ---
 
 ## 制限事項
 
-- **動画対応**: 現在、動画を選択肢として使用する機能は開発中です。
 - **ブラウザ対応**: Chrome での動作確認を行なっています。他のブラウザでは表示が崩れる可能性があります。
 
 ---
