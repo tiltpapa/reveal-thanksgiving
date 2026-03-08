@@ -567,7 +567,7 @@ section:not(.present) .champion-title {
   transform: translateX(-50%);
   width: 40px;
   height: 120%;
-  background: linear-gradient(to right, #ff4444 0%, #ff8844 30%, #ffcc44 60%, #ff8844 80%, #ff4444 100%);
+  background: linear-gradient(#ffcc44, #ff4444);
   z-index: -1;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
@@ -660,6 +660,68 @@ section:not(.present) .champion-title {
   box-sizing: border-box;
   display: flex;
   align-items: center;
+}
+
+/* 6択用：小さいサイズ */
+.champion-6taku .champion-choices li {
+  height: 48px;
+  margin-bottom: 4px;
+  padding: 8px 24px 8px 70px;
+  font-size: 1.1em;
+}
+
+.champion-6taku .symbol-item {
+  width: 48px;
+  height: 48px;
+  font-size: 1.4em;
+}
+
+.champion-6taku .answer-symbols {
+  gap: 4px;
+}
+
+.champion-6taku .champion-choices li::before {
+  width: 38px;
+  height: 38px;
+  left: 18px;
+  font-size: 1em;
+}
+
+.champion-6taku .champion-right {
+  padding-top: 80px;
+}
+
+/* 2択用：大きいサイズ */
+.champion-2taku .champion-choices li {
+  height: 100px;
+  margin-bottom: 16px;
+  padding: 20px 32px 20px 100px;
+  font-size: 1.5em;
+}
+
+.champion-2taku .symbol-item {
+  width: 80px;
+  height: 80px;
+  font-size: 2.2em;
+}
+
+.champion-2taku .answer-symbols {
+  gap: 16px;
+}
+
+.champion-2taku .answer-symbols::before {
+  width: 50px;
+}
+
+.champion-2taku .champion-choices li::before {
+  width: 60px;
+  height: 60px;
+  left: 20px;
+  font-size: 1.4em;
+}
+
+.champion-2taku .champion-right {
+  padding-top: 80px;
 }
 
 .champion-choices li::before {

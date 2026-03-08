@@ -161,9 +161,20 @@
         const generateChampionSlide = (championAnswer, choices) => {
             const symbolsContainer = document.getElementById('answer-symbols');
             const choicesContainer = document.getElementById('champion-choices');
+            const championSlide = document.getElementById('champion-answer-slide');
             
             symbolsContainer.innerHTML = '';
             choicesContainer.innerHTML = '';
+            
+            // 選択肢数に応じたクラスを追加
+            championSlide.classList.remove('champion-2taku', 'champion-4taku', 'champion-6taku');
+            if (championAnswer.length === 2) {
+                championSlide.classList.add('champion-2taku');
+            } else if (championAnswer.length === 6) {
+                championSlide.classList.add('champion-6taku');
+            } else {
+                championSlide.classList.add('champion-4taku');
+            }
             
             const symbols = ['A', 'B', 'C', 'D', 'E', 'F'];
             
@@ -198,10 +209,18 @@
             isCorrect = true;
             wrongIndex = -1;
             
+            // 選択肢数に応じたクラス名を決定
+            let takuClass = 'champion-4taku';
+            if (championAnswer.length === 2) {
+                takuClass = 'champion-2taku';
+            } else if (championAnswer.length === 6) {
+                takuClass = 'champion-6taku';
+            }
+            
             // 最後の2つは一度に開示するため、スライド数は選択肢数-1
             for (let i = 0; i < correctAnswer.length - 1; i++) {
                 const section = document.createElement('section');
-                section.className = 'reveal-answer';
+                section.className = `reveal-answer ${takuClass}`;
                 
                 const h1 = document.createElement('h1');
                 h1.className = 'champion-title';
