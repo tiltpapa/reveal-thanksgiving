@@ -2,7 +2,16 @@
   "mcpServers": {
     "chrome-devtools": {
       "command": "npx",
-      "args": ["-y", "chrome-devtools-mcp@latest"]
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "autoApprove": [
+        "navigate_page",
+        "take_screenshot",
+        "press_key",
+        "new_page"
+      ]
     },
     "reveal.js": {
       "command": "npx",
