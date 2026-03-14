@@ -245,7 +245,7 @@
   border: 4px ridge #000;
   border-radius: 16px;
   padding: 20px 10px 0px 10px;
-  font-size: 1.4em;
+  font-size: 2em;
   font-weight: normal;
   text-align: center;
   box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
@@ -272,7 +272,7 @@
   border: 4px ridge #000;
   border-radius: 16px;
   padding: 20px 10px 0px 10px;
-  font-size: 1.4em;
+  font-size: 2em;
   font-weight: normal;
   text-align: center;
   box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
@@ -299,7 +299,7 @@
   border: 4px ridge #000;
   border-radius: 16px;
   padding: 20px 8px 0px 8px;
-  font-size: 1.2em;
+  font-size: 2em;
   font-weight: normal;
   text-align: center;
   box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
@@ -1070,7 +1070,7 @@ section:not(.present) .champion-title {
   border: 4px ridge #000;
   border-radius: 16px;
   padding: 40px 8px 8px 8px;
-  font-size: 1.0em;
+  font-size: 2em;
   font-weight: normal;
   text-align: center;
   box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 3px 6px rgba(0,0,0,0.4);
